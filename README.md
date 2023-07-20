@@ -1,4 +1,4 @@
-# credit-risk-classification : Clustering Cryptocurrencies
+# Clustering Cryptocurrencies
 In this project, I use the unsupervised learning method called K-Means clustering to categorize cryptocurrencies based on their performance. The goal is to create portfolio recommendations that can potentially yield profitable investment strategies.
 
 # Data
