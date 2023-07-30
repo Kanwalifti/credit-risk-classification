@@ -18,7 +18,7 @@ Machine Learning Model 1: Logistic Regression Model with Original Data Original 
 ![Original_Data](https://github.com/Kanwalifti/credit-risk-classification-SupervisedLearning/blob/main/accuracy%20original%20data.png)
 
 Machine Learning Model 2: Logistic Regression Model with StandardScale() Data Scaled Data
-![Scaled_Data]()
+![Scaled_Data](https://github.com/Kanwalifti/credit-risk-classification-SupervisedLearning/blob/main/accuracy%20Scaled%20data.png)
 
 Machine Learning Model 3: RandomForest Calssifier with Original Data RandomForest Data
 ![RandomForestClassifier_Data]()
