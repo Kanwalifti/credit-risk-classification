@@ -1,21 +1,21 @@
 ## Overview of the Analysis
 The objective of this analysis is to develop a model capable of determining the creditworthiness of borrowers.
 
-The dataset used for this analysis comprises historical lending data obtained from a peer-to-peer lending services company.
+- The dataset used for this analysis comprises historical lending data obtained from a peer-to-peer lending services company.
 
-The dependent variable (y value) in this analysis is the "loan status," indicating whether a loan is considered healthy or at risk.
+- The dependent variable (y value) in this analysis is the "loan status," indicating whether a loan is considered healthy or at risk.
 
-The independent variables (x values) include loan size, interest rate, borrower income, debt-to-income ratio, number of accounts, and derogatory marks.
+- The independent variables (x values) include loan size, interest rate, borrower income, debt-to-income ratio, number of accounts, and derogatory marks.
 
-To conduct the analysis, the data is first split into training and test sets. Next, the dependent and independent variables are defined. A logistic regression model is then created and trained using the original data. The trained model is used to make predictions, and its performance is evaluated.
+- To conduct the analysis, the data is first split into training and test sets. Next, the dependent and independent variables are defined. A logistic regression model is then created and trained using the original data. The trained model is used to make predictions, and its performance is evaluated.
 
-To account for data imbalances, two different logistic regression models are created: one using the original dataset and another using a randomly oversampled dataset. The oversampling technique helps to address any class imbalances in the "loan status" variable. The results of both models are compared using the scikit-learn library.
+- To account for data imbalances, two different logistic regression models are created: one using the original dataset and another using a randomly oversampled dataset. The oversampling technique helps to address any class imbalances in the "loan status" variable. The results of both models are compared using the scikit-learn library.
 
 Overall, the goal is to develop a reliable model that can accurately predict the creditworthiness of borrowers, and this analysis explores different approaches to achieve that.
 
 # Results
 Machine Learning Model 1: Logistic Regression Model with Original Data Original Data
-![Original_Data]()
+![Original_Data](https://github.com/Kanwalifti/credit-risk-classification-SupervisedLearning/blob/main/accuracy%20original%20data.png)
 
 Machine Learning Model 2: Logistic Regression Model with StandardScale() Data Scaled Data
 ![Scaled_Data]()
