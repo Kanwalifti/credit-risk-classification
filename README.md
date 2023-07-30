@@ -1,46 +1,34 @@
-# Clustering Cryptocurrencies
-In this project, I use the unsupervised learning method called K-Means clustering to categorize cryptocurrencies based on their performance. The goal is to create portfolio recommendations that can potentially yield profitable investment strategies.
+## Overview of the Analysis
+The objective of this analysis is to develop a model capable of determining the creditworthiness of borrowers.
 
-# Data
-"crypto_market_data.csv" contains market data for various cryptocurrencies recorded across different time periods.
+The dataset used for this analysis comprises historical lending data obtained from a peer-to-peer lending services company.
+
+The dependent variable (y value) in this analysis is the "loan status," indicating whether a loan is considered healthy or at risk.
+
+The independent variables (x values) include loan size, interest rate, borrower income, debt-to-income ratio, number of accounts, and derogatory marks.
+
+To conduct the analysis, the data is first split into training and test sets. Next, the dependent and independent variables are defined. A logistic regression model is then created and trained using the original data. The trained model is used to make predictions, and its performance is evaluated.
+
+To account for data imbalances, two different logistic regression models are created: one using the original dataset and another using a randomly oversampled dataset. The oversampling technique helps to address any class imbalances in the "loan status" variable. The results of both models are compared using the scikit-learn library.
+
+Overall, the goal is to develop a reliable model that can accurately predict the creditworthiness of borrowers, and this analysis explores different approaches to achieve that.
+
+# Results
+Machine Learning Model 1: Logistic Regression Model with Original Data Original Data
+![Original_Data]()
+
+Machine Learning Model 2: Logistic Regression Model with StandardScale() Data Scaled Data
+![Scaled_Data]()
+
+Machine Learning Model 3: RandomForest Calssifier with Original Data RandomForest Data
+![RandomForestClassifier_Data]()
+
 
 # Summary
-To begin, I utilize the elbow curve method with normalized data to determine the optimal value of "k" for the K-Means model, which will be applied using all the original features present in the dataset.
-[fig]
+The analysis indicates that the collected data is suitable for training and testing the Machine Learning Classification Model effectively. However, to improve the model's predictions, it is essential to address the issue of class imbalance in the dataset.
 
-After identifying the optimal "k" value, I proceed to train and predict the K-Means model, creating four clusters of cryptocurrencies. The inertia of each cluster is substantial, prompting consideration for reducing the number of features in the dataset.
-[fig]
+By randomforest classifier the data, the class imbalance problem is mitigated, leading to higher balanced accuracy and recall scores. The increased recall value allows the model to make more accurate predictions for risky loans.
 
-In order to reduce the number of features, I used Principal Component Analysis (PCA) to establish three primary clusters.
-[fig]
+The consequences of incorrect predictions involve two issues: false positives and false negatives. False positives occur when users are incorrectly flagged as risky despite being healthy borrowers, while false negatives occur when risky borrowers are not identified as such.
 
-After obtaining the PCA data, I recalculated the optimal "k" value for the K-Means model.
-[fig]
-Lastly, using the optimal "k" value for the PCA features, I visualize the new clusters by plotting them.
-
-# Technologies
-This is a Python 3.7 project ran using a JupyterLab in a conda dev environment.
-
-The following dependencies are used:
-
-Jupyter - Running code
-Conda (4.13.0) - Dev environment
-Pandas (1.3.5) - Data analysis
-Matplotlib (3.5.1) - Data visualization
-Numpy (1.21.5) - Data calculations + Pandas support
-hvPlot (0.8.1) - Interactive Pandas plots
-scikit-learn (1.0.2) - KMeans clustering, data normalization, and PCA
-
-# Installation Instructions:
-To run the program in JupyterLab, start by installing the Anaconda distribution. Once installed, launch JupyterLab within a conda development environment.
-
-To ensure smooth execution of your notebook, use the "requirements.txt" file to replicate the exact conda development environment used during the project's development.
-
-To create a duplicate of the conda development environment, use the following command:
-    conda create --name myenv --file requirements.txt
-Afterwards, install the requirements using this command:
-    conda install --name myenv --file requirements.txt
-These steps will set up the necessary environment to run the program successfully in JupyterLab.
-
-# Usage:
-The Jupyter notebook "crypto_investments.ipynb" contains all the necessary steps for data collection, preparation, and analysis. Data visualizations are displayed inline, and detailed analysis responses accompany each visualization.
+Both cases have associated costs, making it vital to predict both positive (risky) and negative (healthy) instances accurately. As a result, the model should strive for good accuracy in terms of both classes to minimize the impact of misclassification.
